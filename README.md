@@ -23,18 +23,20 @@ Accurate passenger demand prediction helps in:
 
 ## Dataset
 
-The hackathon provided two datasets:
+The RedBus Data Hackathon provided two datasets used for model development.
 
 ### **1. `train.csv`**
 
-Contains the target variable used for model training.
+Contains route and journey information used for model training.
 
-| Column            | Description                |
-| ----------------- | -------------------------- |
-| `doj`             | Date of Journey            |
-| `srcid`           | Source City ID             |
-| `destid`          | Destination City ID        |
-| `final_seatcount` | Final Passenger Seat Count |
+| Column | Description |
+|--------|-------------|
+| `doj` | Date of Journey |
+| `srcid` | Source City ID |
+| `destid` | Destination City ID |
+| `route_key` | Unique identifier for each route |
+
+---
 
 ### **2. `transactions.csv`**
 
@@ -42,14 +44,16 @@ Contains historical booking and transaction information for each route.
 
 Key attributes include:
 
-* Source & Destination IDs
-* Source & Destination Regions
-* Source & Destination Tier Information
-* Cumulative Search Count
-* Cumulative Seat Count
-* Booking Date
-* Journey Date
+- Source & Destination IDs
+- Source & Destination Regions
+- Source & Destination Tier Information
+- Booking Date (`doi`)
+- Journey Date (`doj`)
+- Days Before Departure (`dbd`)
+- Cumulative Search Count
+- Cumulative Seat Count
 
+The transaction dataset was merged with the training dataset to extract historical booking trends and create predictive features.
 ---
 
 ## Data Preprocessing

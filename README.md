@@ -53,7 +53,7 @@ Key attributes include:
 - Cumulative Search Count
 - Cumulative Seat Count
 
-The transaction dataset was merged with the training dataset to extract historical booking trends and create predictive features.
+
 ---
 
 ## Data Preprocessing
